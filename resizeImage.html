@@ -1,0 +1,18 @@
+<script>
+jQuery(document).ready(function(){
+  jQuery('area').each(function(i,v){
+    var href = jQuery(v).attr('href');
+    if (typeof href === 'undefined') {
+       
+	jQuery(v).attr("data-maphilight", '{"strokeColor":"0000ff"}');  
+    }
+    if( i === jQuery('area').length - 1) {
+        imageMapResize();
+        jQuery('img[usemap]').maphilight();
+    }
+  });
+
+});
+
+jQuery('map').find('br').remove();
+</script>
